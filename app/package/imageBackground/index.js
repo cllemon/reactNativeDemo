@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { View, ImageBackground } from 'react-native';
+import { View, ImageBackground, Text } from 'react-native';
 import Card from '../../widget/card';
 import Package from '../../widget/package';
 
 const COMPONENT_LABEL = '背景图像组件';
 const COMPONENT_VALUE = 'ImageBackground';
+const IMAGEBACKGROUND_URL =
+  'https://farm3.staticflickr.com/2811/33823326832_059359647d_k.jpg';
 
 class ImageBackgroundPackage extends Component {
   constructor(props) {
@@ -14,7 +16,21 @@ class ImageBackgroundPackage extends Component {
   }
 
   previewDemoOne = () => {
-    return <View />;
+    return (
+      <ImageBackground
+        source={{ uri: IMAGEBACKGROUND_URL }}
+        style={{
+          width: '100%',
+          height: 440,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text style={{ fontSize: 60, color: '#fff', fontWeight: 'bold' }}>
+          Inside
+        </Text>
+      </ImageBackground>
+    );
   };
 
   render() {
@@ -25,7 +41,7 @@ class ImageBackgroundPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={2044}>
+        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={444}>
           {this.previewDemoOne()}
         </Card>
       </Package>
