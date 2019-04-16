@@ -1,3 +1,4 @@
 export default {
-  FIRST: '123'
+  FIRST: '这块代码得重写',
+  SECOND: '这块代码得重写'
 };
