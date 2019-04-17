@@ -1,27 +1,82 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, WebView } from 'react-native';
+import Card from '../../widget/card';
+import Package from '../../widget/package';
 
-class WebView extends Component {
+const COMPONENT_LABEL = '用于访问一个网页';
+const COMPONENT_VALUE = 'WebView';
+const OPERATE_LIST = [
+  {
+    label: 'RN Community',
+    value: 'https://github.com/react-native-community'
+  },
+  {
+    label: 'React-Native',
+    value: 'https://github.com/facebook/react-native'
+  },
+  {
+    label: 'Ant Design',
+    value: 'https://ant.design/docs/react/introduce-cn'
+  },
+  {
+    label: 'React',
+    value: 'https://reactjs.org/'
+  },
+  {
+    label: 'ElementUI',
+    value: 'http://element-cn.eleme.io/#/zh-CN/guide/design'
+  },
+  {
+    label: 'Reactnavigation',
+    value: 'https://reactnavigation.org/'
+  }
+];
+
+class WebViewPackage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      url: 'https://reactjs.org/'
+    };
+  }
+
+  previewDemoOne = () => {
+    return (
+      <View style={{ width: 400, height: 340, padding: 20 }}>
+        <WebView
+          ref='WebView'
+          startInLoadingState={true}
+          automaticallyAdjustContentInsets={true}
+          source={{ uri: this.state.url }}
+        />
+      </View>
+    );
+  };
+
+  onOperate = item => {
+    this.setState({ url: item.value });
+  };
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>WebView</Text>
-      </View>
+      <Package
+        label={COMPONENT_LABEL}
+        value={COMPONENT_VALUE}
+        navigation={this.props.navigation}
+      >
+        {/** demo - 1 */}
+        <Card
+          html={COMPONENT_VALUE}
+          codeHeight={1044}
+          operateList={OPERATE_LIST}
+          onOperate={this.onOperate}
+        >
+          {this.previewDemoOne()}
+        </Card>
+      </Package>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 30
-  }
-});
-
-export default WebView;
+export default WebViewPackage;
