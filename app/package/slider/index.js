@@ -97,7 +97,7 @@ class SliderPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={1044}>
+        <Card html={COMPONENT_VALUE} codeHeight={1020}>
           {this.previewDemoOne()}
         </Card>
       </Package>

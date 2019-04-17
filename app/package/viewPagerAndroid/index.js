@@ -154,7 +154,7 @@ class ViewPagerAndroidPackage extends Component {
         {/** demo - 1 */}
         <Card
           html={COMPONENT_VALUE}
-          codeHeight={1804}
+          codeHeight={1920}
           operateList={OPERATE_LIST}
           onOperate={this.onOperate}
         >

@@ -21,14 +21,6 @@ const OPERATE_LIST = [
   {
     label: 'React',
     value: 'https://reactjs.org/'
-  },
-  {
-    label: 'ElementUI',
-    value: 'http://element-cn.eleme.io/#/zh-CN/guide/design'
-  },
-  {
-    label: 'Reactnavigation',
-    value: 'https://reactnavigation.org/'
   }
 ];
 
@@ -43,7 +35,9 @@ class WebViewPackage extends Component {
 
   previewDemoOne = () => {
     return (
-      <View style={{ width: 400, height: 340, padding: 20 }}>
+      <View
+        style={{ width: 360, height: 300, paddingLeft: 20, paddingRight: 20 }}
+      >
         <WebView
           ref='WebView'
           startInLoadingState={true}
@@ -68,7 +62,7 @@ class WebViewPackage extends Component {
         {/** demo - 1 */}
         <Card
           html={COMPONENT_VALUE}
-          codeHeight={1044}
+          codeHeight={944}
           operateList={OPERATE_LIST}
           onOperate={this.onOperate}
         >

@@ -10,7 +10,7 @@ import {
 import Card from '../../widget/card';
 import Package from '../../widget/package';
 
-const COMPONENT_LABEL = '显示多种不同类型图片组件';
+const COMPONENT_LABEL = '响应触摸操作 - 高亮/透明度/没有任何视觉反馈';
 const COMPONENT_VALUE = 'Touchable';
 
 class TouchablePackage extends Component {
@@ -70,7 +70,7 @@ class TouchablePackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={1040}>
+        <Card html={COMPONENT_VALUE} codeHeight={910}>
           {this.previewDemoOne()}
         </Card>
       </Package>

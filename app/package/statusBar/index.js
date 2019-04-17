@@ -34,7 +34,7 @@ const OPERATE_LIST = [
     label: '背景色(royalblue)',
     value: 'BackgroundColor',
     type: 'setBackgroundColor',
-    params: ['#6a51ae', true]
+    params: ['#409EFF', true]
   },
   {
     label: '背景色(default)',
@@ -89,7 +89,7 @@ class StatusBarPackage extends Component {
         {/** demo - 1 */}
         <Card
           html={COMPONENT_VALUE}
-          codeHeight={744}
+          codeHeight={1044}
           operateList={OPERATE_LIST}
           onOperate={this.onOperate}
         >

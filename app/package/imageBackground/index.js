@@ -41,7 +41,7 @@ class ImageBackgroundPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={444}>
+        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={330}>
           {this.previewDemoOne()}
         </Card>
       </Package>

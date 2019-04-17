@@ -75,16 +75,6 @@ const TEXT_OPERATE_LIST = [
     label: '溢出符( clip )',
     value: 'clip',
     type: 'ellipsizeMode'
-  },
-  {
-    label: '开启长按选择',
-    value: true,
-    type: 'selectable'
-  },
-  {
-    label: '禁用长按选择',
-    value: false,
-    type: 'selectable'
   }
 ];
 

@@ -70,7 +70,7 @@ class ImagePackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={640}>
+        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={560}>
           {this.previewDemoOne(BASIC_LIST)}
         </Card>
         {/** demo - 2

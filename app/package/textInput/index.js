@@ -156,7 +156,7 @@ class TextInputPackage extends Component {
           {/** demo - 1 */}
           <Card
             html={COMPONENT_VALUE}
-            codeHeight={2230}
+            codeHeight={1900}
             operateList={OPERATE_LIST_DEMO_ONE}
             onOperate={this.onOperate}
           >

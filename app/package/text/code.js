@@ -120,16 +120,6 @@ export default {
 
   const TEXT_OPERATE_LIST = [
     {
-      label: '开启长按选择',
-      value: true,
-      type: 'selectable'
-    },
-    {
-      label: '禁用长按选择',
-      value: false,
-      type: 'selectable'
-    },
-    {
       label: '溢出符( tail )',
       value: 'tail',
       type: 'ellipsizeMode'
