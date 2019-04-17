@@ -144,7 +144,7 @@ class ModalInputPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={244}>
+        <Card html={COMPONENT_VALUE} codeHeight={1844}>
           {this.previewDemoOne()}
         </Card>
       </Package>
