@@ -70,7 +70,7 @@ class SwitchPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={2044}>
+        <Card html={COMPONENT_VALUE} codeHeight={744}>
           {this.previewDemoOne()}
         </Card>
       </Package>
