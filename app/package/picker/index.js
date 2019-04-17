@@ -92,8 +92,8 @@ class PickerPackage extends Component {
       >
         {/** demo - 1 */}
         <Card
-          html={[COMPONENT_VALUE, 'FIRST']}
-          codeHeight={444}
+          html={COMPONENT_VALUE}
+          codeHeight={44}
           operateList={OPERATE_LIST}
           onOperate={this.onOperate}
         >
