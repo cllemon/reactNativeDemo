@@ -7,9 +7,10 @@ import RefreshControl from './refreshControl';
 import ScrollView from './scrollView';
 import SectionList from './sectionList';
 import StatusBar from './statusBar';
-import TouchableHighlight from './touchableHighlight';
-import TouchableOpacity from './touchableOpacity';
-import TouchableWithoutFeedback from './touchableWithoutFeedback';
+// import TouchableHighlight from './touchableHighlight';
+// import TouchableOpacity from './touchableOpacity';
+// import TouchableWithoutFeedback from './touchableWithoutFeedback';
+import Touchable from './touchable/index';
 import ViewPagerAndroid from './viewPagerAndroid';
 import VirtualizedList from './virtualizedList';
 import WebView from './webView';
@@ -32,9 +33,10 @@ export const packageList = {
   ScrollView,
   SectionList,
   StatusBar,
-  TouchableHighlight,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
+  // TouchableHighlight,
+  // TouchableOpacity,
+  // TouchableWithoutFeedback,
+  Touchable,
   ViewPagerAndroid,
   VirtualizedList,
   WebView,

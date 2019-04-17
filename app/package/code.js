@@ -8,6 +8,12 @@ import Image from './image/code';
 import ImageBackground from './imageBackground/code';
 import Slider from './slider/code';
 import Switch from './switch/code';
+import Modal from './modal/code';
+import Picker from './picker/code';
+import StatusBar from './statusBar/code';
+import ViewPagerAndroid from './viewPagerAndroid/code';
+import WebView from './webView/code';
+import Touchable from './touchable/code';
 
 export const codeList = {
   ActivityIndicator,
@@ -19,5 +25,11 @@ export const codeList = {
   Image,
   ImageBackground,
   Slider,
-  Switch
+  Switch,
+  Modal,
+  Picker,
+  StatusBar,
+  ViewPagerAndroid,
+  WebView,
+  Touchable
 };
