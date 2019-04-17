@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, View } from 'react-native';
+import { TextInput, View, KeyboardAvoidingView } from 'react-native';
 import Card from '../../widget/card';
 import Package from '../../widget/package';
 
@@ -8,11 +8,11 @@ const COMPONENT_VALUE = 'TextInput';
 const SELECTIONCOLOR = '#409EFF';
 const PLACEHOLDERTEXTCOLOR = '#999';
 const PLACEHOLDER = '请输入...';
-OPERATE_LIST_DEMO_ONE = [
+const OPERATE_LIST_DEMO_ONE = [
   {
-    label: '隐藏光标',
-    value: 'caretHidden',
-    type: 'caretHidden'
+    label: '单/多选框',
+    value: 'multiline',
+    type: 'multiline'
   },
   {
     label: '密码框',
@@ -23,13 +23,16 @@ OPERATE_LIST_DEMO_ONE = [
     label: '禁用',
     value: 'editables',
     type: 'editable'
-  }
-];
-OPERATE_LIST_DEMO_SECOND = [
+  },
   {
     label: '数字键盘',
     value: 'numeric',
     type: 'keyboardType'
+  },
+  {
+    label: '隐藏光标',
+    value: 'caretHidden',
+    type: 'caretHidden'
   },
   {
     label: 'number-pad',
@@ -63,8 +66,7 @@ class TextInputPackage extends Component {
     super(props);
 
     this.state = {
-      text_first: '',
-      text_second: '',
+      text: '',
       editable: true,
       caretHidden: false,
       multiline: false,
@@ -72,66 +74,73 @@ class TextInputPackage extends Component {
       keyboardAppearance: 'default',
       keyboardType: 'default',
       inlineImageLeft: 'search_icon',
-      enablesReturnKeyAutomatically: false,
       maxLength: 200,
       numberOfLines: 2,
       returnKeyType: 'go'
     };
   }
 
-  /**
-   * 回调函数当软键盘的确定
-   * @memberof TextInputPackage
-   */
   onSubmitEditing = val => {
-    console.log(val);
+    console.log('软键盘的确定:', val);
   };
 
   onOperate = item => {
+    if (item.type === 'keyboardType' || item.type === 'keyboardAppearance') {
+      return this.setState({ [item.type]: item.value });
+    }
     this.setState({ [item.type]: !this.state[item.type] });
   };
 
-  onOperateSecond = item => {
-    this.setState({ [item.type]: item.value });
-  };
-
-  previewDemoOne = ({ type, multiline }) => {
+  previewDemoOne = () => {
+    const {
+      text,
+      caretHidden,
+      multiline,
+      editable,
+      keyboardAppearance,
+      keyboardType,
+      maxLength,
+      numberOfLines,
+      returnKeyType,
+      secureTextEntry,
+      inlineImageLeft
+    } = this.state;
     return (
-      <View
-        style={{
-          height: multiline ? 80 : 40,
-          width: 260,
-          borderColor: '#dcdfe6',
-          borderWidth: 1,
-          borderRadius: 4,
-          padding: 4
-        }}
-      >
-        <TextInput
-          style={{ padding: 0, margin: 0 }}
-          ref='TextInput'
-          onSubmitEditing={this.onSubmitEditing}
-          onChangeText={text => this.setState({ [type]: text })}
-          value={this.state[type]}
-          caretHidden={this.state.caretHidden}
-          editable={this.state.editable}
-          enablesReturnKeyAutomatically={
-            this.state.enablesReturnKeyAutomatically
-          }
-          keyboardAppearance={this.state.keyboardAppearance}
-          keyboardType={this.state.keyboardType}
-          maxLength={this.state.maxLength}
-          multiline={multiline}
-          numberOfLines={this.state.numberOfLines}
-          returnKeyType={this.state.returnKeyType}
-          secureTextEntry={this.state.secureTextEntry}
-          inlineImageLeft={this.state.inlineImageLeft}
-          placeholder={PLACEHOLDER}
-          placeholderTextColor={PLACEHOLDERTEXTCOLOR}
-          selectionColor={SELECTIONCOLOR}
-          autoFocus={false}
-          inlineImagePadding={5}
-        />
+      <View style={{ marginTop: 30, marginBottom: 30 }}>
+        <View
+          style={{
+            height: multiline ? 80 : 40,
+            width: 260,
+            borderColor: Boolean(text.trim()) ? '#409EFF' : '#dcdfe6',
+            borderWidth: 1,
+            borderRadius: 4,
+            padding: 4
+          }}
+        >
+          <TextInput
+            style={{ padding: 0, margin: 0 }}
+            ref='TextInput'
+            onSubmitEditing={this.onSubmitEditing}
+            onChangeText={text => this.setState({ text })}
+            value={text}
+            caretHidden={caretHidden}
+            editable={editable}
+            keyboardAppearance={keyboardAppearance}
+            keyboardType={keyboardType}
+            maxLength={maxLength}
+            multiline={multiline}
+            numberOfLines={numberOfLines}
+            returnKeyType={returnKeyType}
+            secureTextEntry={secureTextEntry}
+            inlineImageLeft={!multiline ? inlineImageLeft : ''}
+            placeholder={PLACEHOLDER}
+            placeholderTextColor={PLACEHOLDERTEXTCOLOR}
+            selectionColor={SELECTIONCOLOR}
+            autoFocus={false}
+            inlineImagePadding={5}
+            enablesReturnKeyAutomatically={false}
+          />
+        </View>
       </View>
     );
   };
@@ -143,25 +152,17 @@ class TextInputPackage extends Component {
         value={COMPONENT_VALUE}
         navigation={this.props.navigation}
       >
-        {/** demo - 1 */}
-        <Card
-          html={[COMPONENT_VALUE, 'FIRST']}
-          codeHeight={60}
-          operateList={OPERATE_LIST_DEMO_ONE}
-          onOperate={this.onOperate}
-        >
-          {this.previewDemoOne({ type: 'text_first', multiline: false })}
-        </Card>
-
-        {/** demo - 2 */}
-        <Card
-          html={[COMPONENT_VALUE, 'SECOND']}
-          codeHeight={60}
-          operateList={OPERATE_LIST_DEMO_SECOND}
-          onOperate={this.onOperateSecond}
-        >
-          {this.previewDemoOne({ type: 'text_second', multiline: true })}
-        </Card>
+        <KeyboardAvoidingView>
+          {/** demo - 1 */}
+          <Card
+            html={COMPONENT_VALUE}
+            codeHeight={2230}
+            operateList={OPERATE_LIST_DEMO_ONE}
+            onOperate={this.onOperate}
+          >
+            {this.previewDemoOne()}
+          </Card>
+        </KeyboardAvoidingView>
       </Package>
     );
   }
