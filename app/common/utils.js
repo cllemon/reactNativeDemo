@@ -1,9 +1,7 @@
 import { codeList } from '../package/code';
 import { VALUE } from '../common/constance';
 
-/**
- *
- */
+const errorMessage = tip => `请在app/package/code.js 导出【 ${tip} 】模块`;
 
 /**
  * 获取代码块
@@ -12,11 +10,9 @@ export const getCodeBlock = (val = []) => {
   if (val.length) {
     if (Array.isArray(val)) {
       const type = val[0];
-      return codeList[type]
-        ? codeList[type][val[1]]
-        : `请在app/package/code.js 导出【 ${type} 】模块`;
+      return codeList[type] ? codeList[type][val[1]] : errorMessage(type);
     }
-    return codeList[val];
+    return codeList[val] ? codeList[val] : errorMessage(val);
   }
   return '暂无代码';
 };

@@ -1,72 +1,5 @@
 export const componentLabel = [
   {
-    label: '通用组件',
-    value: 'common',
-    icon: '500px-with-circle',
-    children: [
-      {
-        label: '圆形的 loading 提示符号',
-        value: 'ActivityIndicator'
-      },
-      {
-        label: '滚动视图',
-        value: 'ScrollView'
-      },
-      {
-        label: '高性能长列表',
-        value: 'FlatList'
-      },
-      {
-        label: '高性能的分组(section)列表',
-        value: 'SectionList'
-      },
-      {
-        label: '用在ScrollView或FlatList内部，为其添加下拉刷新的功能',
-        value: 'RefreshControl'
-      },
-      {
-        label: 'FlatList和SectionList的底层实现',
-        value: 'VirtualizedList'
-      },
-      {
-        label: '根据键盘的位置自动调整视图位置，避免遮挡',
-        value: 'KeyboardAvoidingView'
-      },
-      {
-        label: '弹出框（覆盖在其他视图之上）',
-        value: 'Modal'
-      },
-      {
-        label: '原生选择器',
-        value: 'Picker'
-      },
-      {
-        label: '控制应用状态栏',
-        value: 'StatusBar'
-      },
-      {
-        label: '允许在子视图之间左右翻页的容器',
-        value: 'ViewPagerAndroid'
-      },
-      {
-        label: 'WebView - 用于访问一个网页',
-        value: 'WebView'
-      },
-      {
-        label: '响应触摸操作 - 高亮',
-        value: 'TouchableHighlight'
-      },
-      {
-        label: '响应触摸操作 - 透明度',
-        value: 'TouchableOpacity'
-      },
-      {
-        label: '响应触摸操作 - 没有任何视觉反馈',
-        value: 'TouchableWithoutFeedback'
-      }
-    ]
-  },
-  {
     label: '基础组件',
     value: 'basic',
     icon: 'power-plug',
@@ -105,7 +38,73 @@ export const componentLabel = [
       }
     ]
   },
-
+  {
+    label: '通用组件',
+    value: 'common',
+    icon: '500px-with-circle',
+    children: [
+      {
+        label: '圆形的 loading 提示符号',
+        value: 'ActivityIndicator'
+      },
+      {
+        label: '滚动视图',
+        value: 'ScrollView'
+      },
+      {
+        label: '高性能长列表',
+        value: 'FlatList'
+      },
+      {
+        label: '高性能的分组(section)列表',
+        value: 'SectionList'
+      },
+      // {
+      //   label: '用在ScrollView或FlatList内部，为其添加下拉刷新的功能',
+      //   value: 'RefreshControl'
+      // },
+      // {
+      //   label: 'FlatList和SectionList的底层实现',
+      //   value: 'VirtualizedList'
+      // },
+      // {
+      //   label: '根据键盘的位置自动调整视图位置，避免遮挡',
+      //   value: 'KeyboardAvoidingView'
+      // },
+      {
+        label: '弹出框（覆盖在其他视图之上）',
+        value: 'Modal'
+      },
+      {
+        label: '原生选择器',
+        value: 'Picker'
+      },
+      {
+        label: '控制应用状态栏',
+        value: 'StatusBar'
+      },
+      {
+        label: '允许在子视图之间左右翻页的容器',
+        value: 'ViewPagerAndroid'
+      },
+      {
+        label: 'WebView - 用于访问一个网页',
+        value: 'WebView'
+      },
+      {
+        label: '响应触摸操作 - 高亮/透明度/没有任何视觉反馈',
+        value: 'Touchable' // Highlight/Opacity/WithoutFeedback
+      }
+      // {
+      //   label: '响应触摸操作 - 透明度',
+      //   value: 'TouchableOpacity'
+      // },
+      // {
+      //   label: '响应触摸操作 - 没有任何视觉反馈',
+      //   value: 'TouchableWithoutFeedback'
+      // }
+    ]
+  },
   {
     label: 'Android',
     value: 'Android',

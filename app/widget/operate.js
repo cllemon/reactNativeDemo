@@ -18,11 +18,11 @@ class Operate extends Component {
   render() {
     return (
       <View style={styles.package_show_operate}>
-        {this.props.list.map(item => {
+        {this.props.list.map((item, index) => {
           return (
             <TouchableOpacity
               activeOpacity={0.6}
-              key={item.value}
+              key={`${item.value}_${index}`}
               onPress={() => {
                 this.props.operate(item);
               }}

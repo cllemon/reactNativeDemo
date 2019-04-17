@@ -29,6 +29,7 @@ class Card extends Component {
           <View style={styles.package_show_component}>
             {this.props.children}
           </View>
+
           {/** 操作 **/}
           {!this.props.operateList.length ? null : (
             <Operate
@@ -37,6 +38,7 @@ class Card extends Component {
             />
           )}
           {/** 代码展示 **/}
+
           <ShowCode
             html={this.props.html ? getCodeBlock(this.props.html) : ''}
             height={this.props.codeHeight}
