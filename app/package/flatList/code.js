@@ -1,3 +1,4 @@
+export default `
 import React, { PureComponent } from 'react';
 import {
   FlatList,
@@ -7,13 +8,9 @@ import {
   Text,
   TouchableOpacity
 } from 'react-native';
-import Card from '../../widget/card';
-import Package from '../../widget/package';
 import { getList } from './mock';
 import Icon from 'react-native-vector-icons/Entypo';
 
-const COMPONENT_LABEL = '高性能长列表';
-const COMPONENT_VALUE = 'FlatList';
 const PAGE_SIZE = 5;
 
 class FlatListPackage extends PureComponent {
@@ -28,9 +25,9 @@ class FlatListPackage extends PureComponent {
     };
   }
 
-  asyncPullData = async () => {
+  asyncPullData = async () =&gt {
     try {
-      if (this.state.data.length > total) return false;
+      if (this.state.data.length &gt total) return false;
       this.setState({ loading: true });
       const { list, total } = await getList(this.state.page, PAGE_SIZE);
       const data = this.state.data.concat(list);
@@ -46,130 +43,118 @@ class FlatListPackage extends PureComponent {
     await this.asyncPullData();
   }
 
-  _onItemPress = item => {
+  _onItemPress = item =&gt {
     console.log(item);
   };
 
   /**
    * 下拉刷新
    */
-  _onRefresh = () => {
-    // this.setState({ data: [], total: 0, page: 1 });
+  _onRefresh = () =&gt {
     console.log('下拉刷新');
   };
 
   /**
    * 触底操作
    */
-  _onEndReached = () => {
+  _onEndReached = () =&gt {
     if (this.state.data.length === this.state.total) return false;
     this.asyncPullData();
   };
 
   /**
-   * 用于避免动态测量内容尺寸的开销
-   */
-  _getItemLayout = (data, index) => ({
-    length: 100,
-    offset: 100 * index,
-    index
-  });
-
-  /**
    * 尾部组件
    */
-  _ListFooterComponent = () => {
+  _ListFooterComponent = () =&gt {
     const { data, total } = this.state;
-    if (data.length < total || this.state.loading) return <View />;
+    if (data.length &lt total || this.state.loading) return false;
     return (
-      <View style={styles.list_footer}>
-        <Text style={styles.list_footer_text}>我也是有底线的</Text>
-      </View>
+      &ltView style={styles.list_footer}&gt
+        &ltText style={styles.list_footer_text}&gt我也是有底线的&lt/Text&gt
+      &lt/View&gt
     );
   };
 
   /**
    * 列表为空时渲染该组件
    */
-  _ListEmptyComponent = () => {
+  _ListEmptyComponent = () =&gt {
     if (this.state.loading) return false;
     return (
-      <View style={styles.none_wraper}>
-        <Text style={styles.none_wraper_text}>暂无数据!</Text>
-      </View>
+      &ltView style={styles.none_wraper}&gt
+        &ltText style={styles.none_wraper_text}&gt暂无数据!&lt/Text&gt
+      &lt/View&gt
     );
   };
 
   /**
    * 为给定的 item 生成一个不重复的 key
    */
-  _keyExtractor = (item, index) => `${item.id}_${index}`;
+  _keyExtractor = (item, index) =&gt item.id;
 
   /**
    * 行与行之间的分隔线组件
    */
-  _ItemSeparatorComponent = ({ highlighted, leadingItem }) => {
+  _ItemSeparatorComponent = ({ highlighted, leadingItem }) =&gt {
     return (
-      // <View style={[styles.separator, highlighted && { color: 'blue' }]} />
-      <View />
+      // &ltView style={[styles.separator, highlighted && { color: 'blue' }]} /&gt
+      &ltView /&gt
     );
   };
 
   /**
    * 从data中挨个取出数据并渲染到列表
    */
-  _renderItem = ({ item, index, separators }) => {
+  _renderItem = ({ item, index, separators }) =&gt {
     return (
-      <TouchableOpacity
+      &ltTouchableOpacity
         style={styles.item}
-        activeOpacity={0.8}
-        onPress={() => {
-          this._onItemPress(item);
-        }}
-      >
-        <View style={styles.item_image}>
-          <Image
+        activeOpacity={0.7}
+        onPress={() =&gt this._onItemPress(item)}
+      &gt
+        &ltView style={styles.item_image}&gt
+          &ltImage
             style={styles.item_image_show}
             source={{ uri: item.owner.avatar_url }}
-          />
-        </View>
-        <View style={styles.item_content}>
-          <Text
+          /&gt
+        &lt/View&gt
+        &ltView style={styles.item_content}&gt
+          &ltText
             style={[styles.item_content_title, { color: '#0366d6' }]}
             numberOfLines={1}
-          >
+          &gt
             {item.full_name}
-          </Text>
-          <Text style={styles.item_content_title} numberOfLines={1}>
+          &lt/Text&gt
+          &ltText style={styles.item_content_title} numberOfLines={1}&gt
             {item.description}
-          </Text>
-          <View style={styles.item_content_tag}>
-            <Text style={styles.item_content_tags}>
-              <Icon name='star' style={styles.item_icon} />
+          &lt/Text&gt
+          &ltView style={styles.item_content_tag}&gt
+            &ltText style={styles.item_content_tags}&gt
+              &ltIcon name='star' style={styles.item_icon} /&gt
               {item.stargazers_count}
-            </Text>
-            <Text style={styles.item_content_tags}>
-              <Icon name='flow-branch' style={styles.item_icon} />
+            &lt/Text&gt
+            &ltText style={styles.item_content_tags}&gt
+              &ltIcon name='flow-branch' style={styles.item_icon} /&gt
               {item.forks_count}
-            </Text>
-            <Text style={styles.item_content_tags}>
-              <Icon
+            &lt/Text&gt
+            &ltText style={styles.item_content_tags}&gt
+              &ltIcon
                 name='controller-record'
                 style={[styles.item_icon, { color: 'rgb(241, 224, 90)' }]}
-              />
+              /&gt
               {item.language}
-            </Text>
-          </View>
-        </View>
-      </TouchableOpacity>
+            &lt/Text&gt
+          &lt/View&gt
+        &lt/View&gt
+      &lt/TouchableOpacity&gt
     );
   };
 
-  _ref = FlatList => {
+  _ref = FlatList =&gt {
     this.FlatList = FlatList;
   };
 
-  _operateRefs = (type, ...params) => {
+  _operateRefs = (type, ...params) =&gt {
     if (this.FlatList) {
       this.FlatList[type](...params);
     }
@@ -178,7 +163,7 @@ class FlatListPackage extends PureComponent {
   /**
    * 滚动到底部
    */
-  _scrollToEnd = () => {
+  _scrollToEnd = () =&gt {
     this._operateRefs('scrollToEnd');
   };
 
@@ -186,15 +171,15 @@ class FlatListPackage extends PureComponent {
    * 将位于指定位置的元素滚动到可视区的指定位置
    * 0 - 1
    */
-  _scrollToIndex = (num = 0) => {
+  _scrollToIndex = (num = 0) =&gt {
     this._operateRefs('scrollToIndex', num);
   };
 
-  previewDemoOne = () => {
-    const { loading, data } = this.state; // getItemLayout={this._getItemLayout}
+  render() {
+    const { loading, data } = this.state;
     return (
-      <View style={{ height: 360, width: 340, padding: 10 }}>
-        <FlatList
+      &ltView style={{ flex: 1, padding: 10 }}&gt
+        &ltFlatList
           data={data}
           refreshing={loading}
           ref={this._ref}
@@ -207,23 +192,8 @@ class FlatListPackage extends PureComponent {
           initialNumToRender={1}
           onEndReached={this._onEndReached}
           onRefresh={this._onRefresh}
-        />
-      </View>
-    );
-  };
-
-  render() {
-    return (
-      <Package
-        label={COMPONENT_LABEL}
-        value={COMPONENT_VALUE}
-        navigation={this.props.navigation}
-      >
-        {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={3270}>
-          {this.previewDemoOne()}
-        </Card>
-      </Package>
+        /&gt
+      &lt/View&gt
     );
   }
 }
@@ -309,4 +279,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default FlatListPackage;
+export default FlatListPackage;\n`;
