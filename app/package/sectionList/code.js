@@ -1,10 +1,6 @@
+export default `
 import React, { Component } from 'react';
 import { View, Text, SectionList } from 'react-native';
-import Card from '../../widget/card';
-import Package from '../../widget/package';
-
-const COMPONENT_LABEL = '高性能的分组(section)列表';
-const COMPONENT_VALUE = 'SectionList';
 
 const SECTIONS = [
   { title: 'Title1', data: ['item1', 'item2'] },
@@ -27,12 +23,12 @@ class SectionListPackage extends Component {
     this.state = {};
   }
 
-  previewDemoOne = list => {
+  render() {
     return (
-      <View style={{ height: 360, width: 340, padding: 10 }}>
-        <SectionList
-          renderItem={({ item, index, section }) => (
-            <Text
+      &ltView style={{ height: 360, width: 340, padding: 10 }}&gt
+        &ltSectionList
+          renderItem={({ item, index, section }) =&gt (
+            &ltText
               key={index}
               style={{
                 borderBottomWidth: 1,
@@ -41,43 +37,28 @@ class SectionListPackage extends Component {
                 height: 40,
                 lineHeight: 40
               }}
-            >
+            &gt
               {item}
-            </Text>
+            &lt/Text&gt
           )}
-          renderSectionHeader={({ section: { title } }) => (
-            <Text
+          renderSectionHeader={({ section: { title } }) =&gt (
+            &ltText
               style={{
                 fontWeight: 'bold',
                 padding: 4,
                 fontSize: 16,
                 backgroundColor: '#eee'
               }}
-            >
+            &gt
               {title}
-            </Text>
+            &lt/Text&gt
           )}
           sections={SECTIONS}
-          keyExtractor={(item, index) => item + index}
-        />
-      </View>
-    );
-  };
-
-  render() {
-    return (
-      <Package
-        label={COMPONENT_LABEL}
-        value={COMPONENT_VALUE}
-        navigation={this.props.navigation}
-      >
-        {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={750}>
-          {this.previewDemoOne()}
-        </Card>
-      </Package>
+          keyExtractor={(item, index) =&gt item + index}
+        /&gt
+      &lt/View&gt
     );
   }
 }
 
-export default SectionListPackage;
+export default SectionListPackage;\n`;

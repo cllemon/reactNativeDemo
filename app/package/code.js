@@ -14,6 +14,8 @@ import StatusBar from './statusBar/code';
 import ViewPagerAndroid from './viewPagerAndroid/code';
 import WebView from './webView/code';
 import Touchable from './touchable/code';
+import FlatList from './flatList/code';
+import SectionList from './sectionList/code';
 
 export const codeList = {
   ActivityIndicator,
@@ -31,5 +33,7 @@ export const codeList = {
   StatusBar,
   ViewPagerAndroid,
   WebView,
-  Touchable
+  Touchable,
+  FlatList,
+  SectionList
 };
