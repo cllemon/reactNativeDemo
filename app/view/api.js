@@ -6,7 +6,7 @@ import Folding from '../widget/folding';
 
 class APIView extends Component {
   onFoldingItemOperate = value => {
-    // this.props.navigation.navigate(value);
+    this.props.navigation.navigate(value);
   };
 
   render() {

@@ -9,7 +9,7 @@ class OtherView extends Component {
     super(props);
 
     this.state = {
-      url: `${BASE_URL}getting-started/`,
+      url: '',
       preURL: ''
     };
   }
@@ -40,7 +40,7 @@ class OtherView extends Component {
           }}
           startInLoadingState={true}
           automaticallyAdjustContentInsets={true}
-          source={{ uri: this.state.url }}
+          source={{ uri: this.state.url || `${BASE_URL}getting-started/` }}
         />
       </View>
     );

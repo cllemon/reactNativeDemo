@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import { styles } from '../common/style';
-
 import Header from './header';
+import Loading from './loading';
 
 const packagePropsType = {
   label: PropTypes.string,
   value: PropTypes.string,
-  navigation: PropTypes.object
+  navigation: PropTypes.object,
+  loading: PropTypes.bool
 };
 
 const packageDefaultProps = {
   label: '',
   value: '',
-  navigation: {}
+  navigation: {},
+  loading: false
 };
 
 class Package extends Component {
@@ -25,6 +27,7 @@ class Package extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Loading visible={this.props.loading} />
         <ScrollView>
           <Header label={this.props.label} value={this.props.value} />
           {this.props.children}
