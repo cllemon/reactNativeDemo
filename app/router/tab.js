@@ -55,7 +55,7 @@ const Tab = createBottomTabNavigator(
   {
     tabBarPosition: 'bottom',
     lazy: true,
-    initialRouteName: 'API'
+    initialRouteName: 'Other'
   }
 );
 
