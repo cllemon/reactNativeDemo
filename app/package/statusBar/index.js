@@ -63,7 +63,7 @@ class StatusBarPackage extends Component {
 
   componentWillUnmount() {
     StatusBar.setTranslucent(false);
-    StatusBar.setBarStyle('light-content', true);
+    StatusBar.setBarStyle('dark-content', true);
     StatusBar.setHidden(false, 'slide');
   }
 

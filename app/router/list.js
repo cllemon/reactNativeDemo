@@ -43,5 +43,14 @@ export const routerList = {
   Image: navigationOption('Image'),
   ImageBackground: navigationOption('ImageBackground'),
   Slider: navigationOption('Slider'),
-  Switch: navigationOption('Switch')
+  Switch: navigationOption('Switch'),
+  Alert: navigationOption('Alert'),
+  AccessibilityInfo: navigationOption('AccessibilityInfo'),
+  AppState: navigationOption('AppState'),
+  CameraRoll: navigationOption('CameraRoll'),
+  ToastAndroid: navigationOption('ToastAndroid'),
+  Clipboard: navigationOption('Clipboard'),
+  Dimensions: navigationOption('Dimensions'),
+  DatePickerAndroid: navigationOption('DatePickerAndroid'),
+  FlexBox: navigationOption('FlexBox')
 };

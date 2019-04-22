@@ -16,6 +16,15 @@ import WebView from './webView/code';
 import Touchable from './touchable/code';
 import FlatList from './flatList/code';
 import SectionList from './sectionList/code';
+import Alert from './alert/code';
+import AccessibilityInfo from './accessibilityInfo/code';
+import AppState from './appState/code';
+import ToastAndroid from './toastAndroid/code';
+import CameraRoll from './cameraRoll/code';
+import Clipboard from './clipboard/code';
+import Dimensions from './dimensions/code';
+import DatePickerAndroid from './datePickerAndroid/code';
+import FlexBox from './flexbox/code';
 
 export const codeList = {
   ActivityIndicator,
@@ -35,5 +44,14 @@ export const codeList = {
   WebView,
   Touchable,
   FlatList,
-  SectionList
+  SectionList,
+  Alert,
+  AccessibilityInfo,
+  AppState,
+  ToastAndroid,
+  CameraRoll,
+  Clipboard,
+  Dimensions,
+  DatePickerAndroid,
+  FlexBox
 };

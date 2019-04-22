@@ -22,6 +22,15 @@ import Image from './image/index';
 import ImageBackground from './imageBackground/index';
 import Slider from './slider/index';
 import Switch from './switch/index';
+import Alert from './alert/index';
+import AccessibilityInfo from './accessibilityInfo/index';
+import AppState from './appState/index';
+import CameraRoll from './cameraRoll/index';
+import ToastAndroid from './toastAndroid/index';
+import Clipboard from './clipboard/index';
+import Dimensions from './dimensions/index';
+import DatePickerAndroid from './datePickerAndroid/index';
+import FlexBox from './flexbox/index';
 
 export const packageList = {
   ActivityIndicator,
@@ -33,9 +42,6 @@ export const packageList = {
   ScrollView,
   SectionList,
   StatusBar,
-  // TouchableHighlight,
-  // TouchableOpacity,
-  // TouchableWithoutFeedback,
   Touchable,
   ViewPagerAndroid,
   VirtualizedList,
@@ -47,5 +53,14 @@ export const packageList = {
   Image,
   ImageBackground,
   Slider,
-  Switch
+  Switch,
+  Alert,
+  AccessibilityInfo,
+  AppState,
+  CameraRoll,
+  ToastAndroid,
+  Clipboard,
+  Dimensions,
+  DatePickerAndroid,
+  FlexBox
 };

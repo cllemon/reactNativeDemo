@@ -6,7 +6,6 @@ import { routerList } from './list';
 
 const StackNavigatorConfigs = {
   initialRouteName: 'Tab'
-  // initialRouteName: 'ScrollView'
 };
 
 const AppNavigator = createStackNavigator(routerList, StackNavigatorConfigs);

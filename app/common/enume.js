@@ -121,11 +121,11 @@ export const componentLabel = [
       {
         label: 'Android 平台 - 工具栏(Toolbar)部件',
         value: 'ToolbarAndroid'
-      },
-      {
-        label: 'Android 平台 - 响应触摸操作',
-        value: 'TouchableNativeFeedback'
       }
+      // {
+      //   label: 'Android 平台 - 响应触摸操作',
+      //   value: 'TouchableNativeFeedback'
+      // }
     ]
   },
   {
@@ -172,32 +172,20 @@ export const APILabel = [
     icon: 'google-drive',
     children: [
       {
-        label: '查询读屏应用的当前状态',
-        value: 'AccessibilityInfo'
-      },
-      {
-        label: 'iOS 平台 - 显示一个 ActionSheet 弹出框',
-        value: 'ActionSheetIOS'
-      },
-      {
         label: '提示对话框 & AlertIOS',
         value: 'Alert'
       },
       {
-        label: '根组件注册',
-        value: 'AppRegistry'
+        label: '查询读屏应用的当前状态',
+        value: 'AccessibilityInfo'
       },
       {
         label: '应用当前是在前台还是在后台',
         value: 'AppState'
       },
       {
-        label: 'AsyncStorage',
-        value: '简单的、异步的、持久化的 Key-Value 存储系统'
-      },
-      {
-        label: '监听设备上的后退按钮事件',
-        value: 'BackHandler'
+        label: 'Android 平台 - 设备上显示一个悬浮的提示信息',
+        value: 'ToastAndroid'
       },
       {
         label: '访问本地相册的功能',
@@ -208,17 +196,36 @@ export const APILabel = [
         value: 'Clipboard'
       },
       {
-        label: '日期选择器的对话框',
-        value: 'DatePickerAndroid'
-      },
-      {
         label: '获取设备屏幕的宽高',
         value: 'Dimensions'
       },
       {
+        label: '日期选择器的对话框',
+        value: 'DatePickerAndroid'
+      },
+
+      // none
+      {
         label: '地理定位',
         value: 'Geolocation'
       },
+      {
+        label: 'AsyncStorage',
+        value: '简单的、异步的、持久化的 Key-Value 存储系统'
+      },
+      {
+        label: 'iOS 平台 - 显示一个 ActionSheet 弹出框',
+        value: 'ActionSheetIOS'
+      },
+      {
+        label: '根组件注册',
+        value: 'AppRegistry'
+      },
+      {
+        label: '监听设备上的后退按钮事件',
+        value: 'BackHandler'
+      },
+
       {
         label: '图片编辑',
         value: 'ImageEditor'
@@ -278,12 +285,38 @@ export const APILabel = [
         value: 'TimePickerAndroid'
       },
       {
-        label: 'Android 平台 - 设备上显示一个悬浮的提示信息',
-        value: 'Toast'
-      },
-      {
         label: '控制设备震动',
         value: 'Vibration'
+      }
+    ]
+  },
+  {
+    label: '布局',
+    value: 'layout',
+    icon: 'sweden',
+    children: [
+      {
+        label: 'FlexBox布局',
+        value: 'FlexBox'
+      }
+    ]
+  },
+  {
+    label: '动画',
+    value: 'animation',
+    icon: 'clapperboard',
+    children: [
+      {
+        label: '动画库',
+        value: 'Animated'
+      },
+      {
+        label: '动画缓动函数',
+        value: 'Easing'
+      },
+      {
+        label: '当布局变化时，自动将视图运动到它们新的位置上',
+        value: 'LayoutAnimation'
       }
     ]
   },
@@ -321,35 +354,32 @@ export const APILabel = [
         value: 'ViewStyle'
       }
     ]
-  },
-  {
-    label: '布局',
-    value: 'layout',
-    icon: 'sweden',
-    children: [
-      {
-        label: '布局属性',
-        value: 'layoutAttr'
-      }
-    ]
-  },
-  {
-    label: '动画',
-    value: 'animation',
-    icon: 'clapperboard',
-    children: [
-      {
-        label: '动画库',
-        value: 'Animated'
-      },
-      {
-        label: '动画缓动函数',
-        value: 'Easing'
-      },
-      {
-        label: '当布局变化时，自动将视图运动到它们新的位置上',
-        value: 'LayoutAnimation'
-      }
-    ]
   }
+];
+
+export const permissionMap = [
+  {
+    label: '已拒绝，不再询问',
+    value: -1
+  },
+  {
+    label: '拒绝授权',
+    value: 0
+  },
+  {
+    label: '授权成功',
+    value: 1
+  }
+];
+
+export const COMMON_IMAGE_FORMAT = [
+  'png',
+  'jpg',
+  'jpeg',
+  'bmp',
+  'gif',
+  'webp',
+  'psd',
+  'svg',
+  'tiff'
 ];

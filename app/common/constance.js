@@ -2,13 +2,15 @@
  * 常量
  */
 
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
 const { height, width } = Dimensions.get('window');
 
 export const VALUE = {
   width: width,
   height: height,
+  ios: Platform.OS === 'ios',
+  android: Platform.OS === 'android',
   introduce:
     '以下将展示 React-Native 官方组件功能，组件样式仅供参考，开发者可根据自身需求自定义自检样式，具体参见 React-Native 官方文档。\n',
   introduceTitle: '🍋 React-Native 官方文档示例演示 🍋',
