@@ -84,7 +84,7 @@ class DatePickerAndroidPackage extends Component {
         {/** demo - 1 */}
         <Card
           html={COMPONENT_VALUE}
-          codeHeight={560}
+          codeHeight={1080}
           operateList={OPERATE_LIST}
           onOperate={this._onOperate}
         >

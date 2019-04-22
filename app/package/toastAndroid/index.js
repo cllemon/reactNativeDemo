@@ -89,7 +89,7 @@ class ToastAndroidPackage extends Component {
         {/** demo - 1 */}
         <Card
           html={COMPONENT_VALUE}
-          codeHeight={1560}
+          codeHeight={1140}
           operateList={OPERATE_LIST}
           onOperate={this._onOperate}
         >

@@ -30,7 +30,7 @@ class DimensionsPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={560}>
+        <Card html={COMPONENT_VALUE} codeHeight={370}>
           {this.previewDemoOne()}
         </Card>
       </Package>

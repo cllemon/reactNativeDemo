@@ -61,7 +61,7 @@ class AccessibilityInfoPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={560}>
+        <Card html={COMPONENT_VALUE} codeHeight={610}>
           {this.previewDemoOne()}
         </Card>
       </Package>

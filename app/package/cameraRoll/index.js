@@ -43,7 +43,7 @@ const OPERATE_LIST = [
   {
     label: '选取图片',
     value: {
-      first: 10,
+      first: 30,
       assetType: 'Photos'
     },
     type: 'getPhotos'
@@ -125,7 +125,7 @@ class CameraRollPackage extends Component {
             >
               <Image
                 source={{ uri: item.file }}
-                style={{ width: 90, height: 90 }}
+                style={{ width: 70, height: 70 }}
               />
             </TouchableOpacity>
           );
@@ -152,7 +152,7 @@ class CameraRollPackage extends Component {
             <Image
               key={index}
               source={{ uri: item.node.image.uri }}
-              style={{ width: 90, height: 90, margin: 10 }}
+              style={{ width: 70, height: 70, margin: 10 }}
             />
           );
         })}
@@ -198,14 +198,14 @@ class CameraRollPackage extends Component {
         loading={this.state.loading}
       >
         {/** demo - 1 */}
-        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={2000}>
+        <Card html={[COMPONENT_VALUE, 'FIRST']} codeHeight={1740}>
           {this.previewDemoOne()}
         </Card>
 
         {/** demo - 2 */}
         <Card
           html={[COMPONENT_VALUE, 'SECOND']}
-          codeHeight={1700}
+          codeHeight={1330}
           operateList={OPERATE_LIST}
           onOperate={this._onOperate}
         >

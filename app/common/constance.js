@@ -12,7 +12,7 @@ export const VALUE = {
   ios: Platform.OS === 'ios',
   android: Platform.OS === 'android',
   introduce:
-    '以下将展示 React-Native 官方组件功能，组件样式仅供参考，开发者可根据自身需求自定义自检样式，具体参见 React-Native 官方文档。\n',
+    '以下将展示 React-Native 官方组件功能，组件样式及样例仅供参考，开发时可根据自身需求自定义样式，具体参见 React-Native 官方文档。\n',
   introduceTitle: '🍋 React-Native 官方文档示例演示 🍋',
   html: `
   <!DOCTYPE html>

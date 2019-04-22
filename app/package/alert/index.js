@@ -83,7 +83,7 @@ class AlertPackage extends Component {
         navigation={this.props.navigation}
       >
         {/** demo - 1 */}
-        <Card html={COMPONENT_VALUE} codeHeight={1000}>
+        <Card html={COMPONENT_VALUE} codeHeight={908}>
           {this.previewDemoOne()}
         </Card>
       </Package>

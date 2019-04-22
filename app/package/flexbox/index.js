@@ -66,7 +66,7 @@ class FlexBoxPackage extends Component {
         {/** demo - 1 */}
         <Card
           html={COMPONENT_VALUE}
-          codeHeight={60}
+          codeHeight={40}
           operateList={OPERATE_LIST}
           onOperate={this._onOperate}
         >
