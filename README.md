@@ -6,15 +6,40 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 ## 在线体验
 
-通过下面的二维码，可以在手机中体验 React-Native-Demos：
+通过下面的二维码，可以在手机中安装体验 React-Native-Demos：
 
 ![]()
+
+## 说明
+
+> 目的是为了直观的熟悉官方提供了哪些能力，使之更熟悉 react-native ，为开发做好充分的准备。
+
+> 将持续更新，直到保持和英文文档进度一致；另还将收录一些第三方库和项目沉淀的一些组件，若有任何问题欢迎交流讨论
+
+> 如果对您有帮助，您可以点右上角 "Star" 鼓励一下 谢谢！ ^\_^
 
 ## 演示图例
 
 ![](/public/images/demo_1.png)
 ![](/public/images/demo_2.png)
 ![](/public/images/demo_3.gif)
+
+## 第三方框架及开发环境
+
+- 开发环境:
+
+  - macOS 10.14.3
+  - node "v8.8.0"
+  - react-native-cli "2.0.1"
+  - Android Studio "3.2"
+  - Xcode "10.2.1"
+
+- 第三方框架
+  - [react-native(0.59.4)](https://github.com/facebook/react-native)
+  - [react-native-fs](https://github.com/itinance/react-native-fs)
+  - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+  - [react-native-webview](https://github.com/react-native-community/react-native-webview)
+  - [react-navigation](https://github.com/react-navigation/react-navigation)
 
 ## 本地运行
 
@@ -40,7 +65,7 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 > 包含本机 Objective-C，Swift，Java 或 Kotlin 代码的 React Native 模块必须“链接”，以便编译器知道将它们包含在应用程序中。
 
 > PS：
-> 运行 Android 项目时，先打开 Virtual Device
+> 运行 Android 项目时，先打开 Virtual Device 或者[真机调式](https://reactnative.cn/docs/running-on-device/)
 
 ## 更新进度
 

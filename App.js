@@ -13,14 +13,7 @@ import AppContainer from './app/router/index';
 export default class App extends Component {
   render() {
     return (
-      // <View
-      //   style={{
-      //     flex: 1,
-      //     marginTop: Platform.OS === 'ios' ? 0 : 30
-      //   }}
-      // >
       <AppContainer onNavigationStateChange={this.handleNavigationChange} />
-      // </View>
     );
   }
 }
