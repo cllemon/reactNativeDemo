@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, Platform } from 'react-native';
 import { componentLabel } from '../common/enume';
 import { VALUE } from '../common/constance';
 import Folding from '../widget/folding';
 
 class ComponentView extends Component {
-  onFoldingItemOperate = value => {
-    this.props.navigation.navigate(value);
+  onFoldingItemOperate = item => {
+    if ((item && item.platForm === Platform.OS) || !item.platForm) {
+      this.props.navigation.navigate(item.value);
+    }
   };
 
   render() {

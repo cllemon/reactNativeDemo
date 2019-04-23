@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 import { WebView } from 'react-native-webview';
 import { VALUE } from '../common/constance';
 import { joinWebCodeBlock } from '../common/utils';
+import { camelCase } from 'lodash';
+
+// https://github.com/cllemon/reactNativeDemo/edit/master/app/package/accessibilityInfo/code.js
+// https://github.com/cllemon/reactNativeDemo/edit/master/app/package/activityIndicator/code.js
 
 const ShowCodePropsType = {
   html: PropTypes.string,
@@ -33,6 +37,10 @@ class ShowCode extends Component {
     return (
       <View style={styles.show_code}>
         <View style={styles.show_code_operate}>
+          {/**
+          <Text style={[styles.show_code_operate_text, { left: 10 }]} onPress={this.toggle}>
+            在GitHub上编辑
+          </Text>*/}
           <Text
             style={[
               styles.show_code_operate_text,

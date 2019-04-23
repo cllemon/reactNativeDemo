@@ -11,6 +11,7 @@ import Card from '../../widget/card';
 import Package from '../../widget/package';
 import Toast from '../../widget/toast';
 import { authorization, generateLocalPath } from '../../common/utils';
+import { VALUE } from '../../common/constance';
 
 const COMPONENT_LABEL = '访问本地相册的功能';
 const COMPONENT_VALUE = 'CameraRoll';
@@ -81,27 +82,40 @@ class CameraRollPackage extends Component {
   _saveToCameraRoll = item => {
     this.MessageTips('确认保存图片到相册？', async () => {
       try {
-        const { code, tip } = await authorization(
-          'WRITE_EXTERNAL_STORAGE',
-          REJECTED_ALERT_AUTH
-        );
-        if (code === 1) {
-          this.setState({ loading: true });
-          const localFileUrl = await generateLocalPath(item.file, 'jpg');
-          if (localFileUrl) {
-            await CameraRoll.saveToCameraRoll(localFileUrl);
-            return this.Toast.show(`保存成功, 您可以到相册中查看`);
-          }
-          return this.Toast.show(`解析本地路径失败，保存图片失败`);
+        this.setState({ loading: true });
+        if (VALUE.ios) {
+          await this.saveToCameraRollForIOS(item);
+          return false;
         }
-        return this.Toast.show(`${tip || '未授权'} 无法保存图片到相册`);
+        await this.saveToCameraRollForAndroid(item);
       } catch (error) {
-        this.Toast.show(`保存图片到相册异常`);
         console.log('保存图片到相册异常', error);
       } finally {
         this.setState({ loading: false });
       }
     });
+  };
+
+  saveToCameraRollForIOS = async item => {
+    await CameraRoll.saveToCameraRoll(item.url);
+    return this.Toast.show(`保存成功, 您可以到相册中查看`);
+  };
+
+  saveToCameraRollForAndroid = async item => {
+    const { code, tip } = await authorization(
+      'WRITE_EXTERNAL_STORAGE',
+      REJECTED_ALERT_AUTH
+    );
+    if (code === 1) {
+      this.setState({ loading: true });
+      const localFileUrl = await generateLocalPath(item.file, 'jpg');
+      if (localFileUrl) {
+        await CameraRoll.saveToCameraRoll(localFileUrl);
+        return this.Toast.show(`保存成功, 您可以到相册中查看`);
+      }
+      return this.Toast.show(`解析本地路径失败，保存图片失败`);
+    }
+    return this.Toast.show(`${tip || '未授权'} 无法保存图片到相册`);
   };
 
   previewDemoOne = () => {
@@ -124,7 +138,7 @@ class CameraRollPackage extends Component {
               }}
             >
               <Image
-                source={{ uri: item.file }}
+                source={{ uri: VALUE.ios ? item.url : item.file }}
                 style={{ width: 70, height: 70 }}
               />
             </TouchableOpacity>
@@ -163,20 +177,41 @@ class CameraRollPackage extends Component {
     );
   };
 
+  /**
+   * 这里只是简单实现两端 - 需要整合
+   */
+  getPhotosForIOS = async () => {
+    const { edges, page_info } = await CameraRoll.getPhotos({
+      first: 10,
+      assetType: 'All',
+      groupTypes: 'All'
+    });
+    this.setState({ selectedList: edges });
+    console.log(edges, page_info);
+  };
+
+  getPhotosForAndroid = async options => {
+    const { code, tip } = await authorization(
+      'READ_EXTERNAL_STORAGE',
+      REJECTED_ALERT_AUTH
+    );
+    if (code === 1) {
+      this.setState({ loading: true });
+      const { edges, page_info } = await CameraRoll.getPhotos(options);
+      this.setState({ selectedList: edges });
+      console.log(edges, page_info);
+      return true;
+    }
+    return this.Toast.show(`${tip || '未授权'} 无法读取图片`);
+  };
+
   _getPhotos = async (options = {}) => {
     try {
-      const { code, tip } = await authorization(
-        'READ_EXTERNAL_STORAGE',
-        REJECTED_ALERT_AUTH
-      );
-      if (code === 1) {
-        this.setState({ loading: true });
-        const { edges, page_info } = await CameraRoll.getPhotos(options);
-        this.setState({ selectedList: edges });
-        console.log(edges, page_info);
-        return true;
+      if (VALUE.ios) {
+        await this.getPhotosForIOS(options);
+        return false;
       }
-      return this.Toast.show(`${tip || '未授权'} 无法读取图片`);
+      await this.getPhotosForAndroid(options);
     } catch (error) {
       this.Toast.show(`读取图片异常`);
       console.log(error, '读取图片异常');

@@ -3,6 +3,7 @@ import { ScrollView, RefreshControl, View, Text } from 'react-native';
 import Card from '../../widget/card';
 import Package from '../../widget/package';
 import { dataFactory } from '../../common/utils';
+import { VALUE } from '../../common/constance';
 
 const COMPONENT_LABEL = '滚动视图';
 const COMPONENT_VALUE = 'ScrollView';
@@ -89,7 +90,7 @@ class ScrollViewPackage extends Component {
               paddingBottom: 20,
               paddingTop: 20,
               paddingRight: 20,
-              height: 50,
+              height: 60,
               alignItems: 'center',
               justifyContent: 'center',
               elevation: 4,

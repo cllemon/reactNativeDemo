@@ -26,12 +26,12 @@ const BUTTON_DEFAULT_LIST = [
 const BUTTON_SIZE_LIST = [
   {
     label: '大尺寸默认按钮',
-    width: 140
+    width: 150
   },
   {
     label: '大尺寸禁用按钮',
     color: '#e6a23c',
-    width: 140,
+    width: 150,
     disabled: true
   }
 ];
@@ -46,10 +46,7 @@ class ButtonPackage extends Component {
       <View style={{ flexDirection: 'row' }}>
         {list.map(item => {
           return (
-            <View
-              style={{ marginLeft: 6, marginRight: 6, width: item.width }}
-              key={item.label}
-            >
+            <View style={{ width: item.width, marginLeft: 3 }} key={item.label}>
               <Button
                 onPress={() => {
                   this.onPressLearnMore(item);

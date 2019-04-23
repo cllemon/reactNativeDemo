@@ -84,10 +84,6 @@ export const componentLabel = [
         value: 'StatusBar'
       },
       {
-        label: '允许在子视图之间左右翻页的容器',
-        value: 'ViewPagerAndroid'
-      },
-      {
         label: 'WebView - 用于访问一个网页',
         value: 'WebView'
       },
@@ -111,16 +107,24 @@ export const componentLabel = [
     icon: 'bug',
     children: [
       {
+        label: '允许在子视图之间左右翻页的容器',
+        value: 'ViewPagerAndroid',
+        platForm: 'android'
+      },
+      {
         label: 'Android 平台 - 抽屉',
-        value: 'DrawerLayoutAndroid'
+        value: 'DrawerLayoutAndroid',
+        platForm: 'android'
       },
       {
         label: 'Android 平台 - 进度条',
-        value: 'ProgressBarAndroid'
+        value: 'ProgressBarAndroid',
+        platForm: 'android'
       },
       {
         label: 'Android 平台 - 工具栏(Toolbar)部件',
-        value: 'ToolbarAndroid'
+        value: 'ToolbarAndroid',
+        platForm: 'android'
       }
       // {
       //   label: 'Android 平台 - 响应触摸操作',
@@ -135,31 +139,38 @@ export const componentLabel = [
     children: [
       {
         label: 'iOS 平台 - 日期/时间选择器',
-        value: 'DatePickerIOS'
+        value: 'DatePickerIOS',
+        platForm: 'ios'
       },
       {
         label: 'iOS 平台 - 渲染一个带蒙版的视图',
-        value: 'MaskedViewIOS'
+        value: 'MaskedViewIOS',
+        platForm: 'ios'
       },
       {
         label: 'iOS 平台 - 选择器',
-        value: 'PickerIOS'
+        value: 'PickerIOS',
+        platForm: 'ios'
       },
       {
         label: 'iOS 平台 - 进度条',
-        value: 'ProgressViewIOS'
+        value: 'ProgressViewIOS',
+        platForm: 'ios'
       },
       {
         label: 'iOS 平台 - 在一个“安全”的可视区域内渲染内容',
-        value: 'SafeAreaView'
+        value: 'SafeAreaView',
+        platForm: 'ios'
       },
       {
         label: 'iOS 平台 - 分段显示多个选项',
-        value: 'SegmentedControlIOS'
+        value: 'SegmentedControlIOS',
+        platForm: 'ios'
       },
       {
         label: 'iOS 平台 - SnapshotViewIOS',
-        value: 'SnapshotViewIOS'
+        value: 'SnapshotViewIOS',
+        platForm: 'ios'
       }
     ]
   }
@@ -185,7 +196,8 @@ export const APILabel = [
       },
       {
         label: 'Android 平台 - 设备上显示一个悬浮的提示信息',
-        value: 'ToastAndroid'
+        value: 'ToastAndroid',
+        platForm: 'android'
       },
       {
         label: '访问本地相册的功能',
@@ -201,7 +213,8 @@ export const APILabel = [
       },
       {
         label: '日期选择器的对话框',
-        value: 'DatePickerAndroid'
+        value: 'DatePickerAndroid',
+        platForm: 'android'
       },
 
       // none

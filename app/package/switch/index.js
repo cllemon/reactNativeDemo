@@ -41,7 +41,7 @@ class SwitchPackage extends Component {
           return (
             <Switch
               key={index}
-              style={{ padding: 20 }}
+              style={{ margin: 20 }}
               value={
                 this.state[
                   item.type

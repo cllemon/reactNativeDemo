@@ -3,7 +3,13 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Platform
+} from 'react-native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/AntDesign';
 import IconEntypo from 'react-native-vector-icons/Entypo';
@@ -50,7 +56,7 @@ class Folding extends Component {
               activeOpacity={0.6}
               key={item.value}
               onPress={() => {
-                this.props.onFoldingItemOperate(item.value);
+                this.props.onFoldingItemOperate(item);
               }}
               style={{ borderTopColor: '#eee', borderTopWidth: 1 }}
             >
@@ -124,7 +130,17 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 15,
     backgroundColor: '#fff',
-    elevation: 4
+    ...Platform.select({
+      ios: {
+        shadowColor: '#999',
+        shadowOffset: { width: 1, height: 1 },
+        shadowRadius: 2,
+        shadowOpacity: 0.5
+      },
+      android: {
+        elevation: 4
+      }
+    })
   },
   folding_icon: {
     fontSize: 26,

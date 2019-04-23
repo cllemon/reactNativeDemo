@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import { VALUE } from '../common/constance';
 
 export const styles = StyleSheet.create({
@@ -22,7 +22,17 @@ export const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     borderRadius: 6,
     flexDirection: 'column',
-    elevation: 4
+    ...Platform.select({
+      ios: {
+        shadowColor: '#999',
+        shadowOffset: { width: 1, height: 1 },
+        shadowRadius: 2,
+        shadowOpacity: 0.5
+      },
+      android: {
+        elevation: 4
+      }
+    })
   },
   package_show_component: {
     minHeight: 100,
