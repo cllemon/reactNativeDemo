@@ -107,13 +107,13 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 - Component - IOS
 
-  - [ ] DatePickerIOS => 待续
-  - [ ] MaskedViewIOS => 待续
-  - [ ] PickerIOS => 待续
-  - [ ] ProgressViewIOS => 待续
-  - [ ] SafeAreaView => 待续
-  - [ ] SegmentedControlIOS => 待续
+  - [x] DatePickerIOS
+  - [x] MaskedViewIOS
+  - [x] PickerIOS
+  - [x] ProgressViewIOS
+  - [x] SegmentedControlIOS
   - [ ] SnapshotViewIOS => 待续
+  - [ ] SafeAreaView => 待续
 
 - API - 交互
 

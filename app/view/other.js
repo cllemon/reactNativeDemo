@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { WebView } from 'react-native-webview';
+import { VALUE } from '../common/constance';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const BASE_URL = 'https://reactnative.cn/docs/';
 
@@ -30,9 +32,29 @@ class OtherView extends Component {
     }
   }
 
+  renderNavigation = () => {
+    // const { state, navigate, setParams } = this.props.navigation;
+    // if (state && state.params && state.params.value) {
+    //   return (
+    //     <View style={styles.navigation}>
+    //       <TouchableOpacity
+    //         onPress={() => {
+    //           setParams({ value: '' });
+    //           navigate(state.params.value);
+    //         }}
+    //       >
+    //         <Icon name='left' style={styles.icon} />
+    //       </TouchableOpacity>
+    //     </View>
+    //   );
+    // }
+    return <View style={styles.bar} />;
+  };
+
   render() {
     return (
       <View style={styles.container}>
+        {this.renderNavigation()}
         <WebView
           ref='webviewbridge'
           onLoadEnd={() => {
@@ -50,6 +72,26 @@ class OtherView extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  bar: {
+    paddingVertical: 10,
+    backgroundColor: '#FFF',
+    width: VALUE.width,
+    borderBottomColor: '#999',
+    borderBottomWidth: 1
+  },
+  navigation: {
+    paddingVertical: 2,
+    backgroundColor: '#FFF',
+    width: VALUE.width,
+    borderBottomColor: '#999',
+    borderBottomWidth: 1
+  },
+  icon: {
+    fontSize: 28,
+    color: '#409EFF',
+    marginTop: 20,
+    marginLeft: 12
   }
 });
 

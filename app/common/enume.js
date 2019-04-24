@@ -158,11 +158,6 @@ export const componentLabel = [
         platForm: 'ios'
       },
       {
-        label: 'iOS 平台 - 在一个“安全”的可视区域内渲染内容',
-        value: 'SafeAreaView',
-        platForm: 'ios'
-      },
-      {
         label: 'iOS 平台 - 分段显示多个选项',
         value: 'SegmentedControlIOS',
         platForm: 'ios'
@@ -170,6 +165,11 @@ export const componentLabel = [
       {
         label: 'iOS 平台 - SnapshotViewIOS',
         value: 'SnapshotViewIOS',
+        platForm: 'ios'
+      },
+      {
+        label: 'iOS 平台 - 在一个“安全”的可视区域内渲染内容',
+        value: 'SafeAreaView',
         platForm: 'ios'
       }
     ]

@@ -54,5 +54,10 @@ export const routerList = {
   DatePickerAndroid: navigationOption('DatePickerAndroid'),
   FlexBox: navigationOption('FlexBox'),
   DrawerLayoutAndroid: navigationOption('DrawerLayoutAndroid'),
-  ProgressBarAndroid: navigationOption('ProgressBarAndroid')
+  ProgressBarAndroid: navigationOption('ProgressBarAndroid'),
+  DatePickerIOS: navigationOption('DatePickerIOS'),
+  MaskedViewIOS: navigationOption('MaskedViewIOS'),
+  PickerIOS: navigationOption('PickerIOS'),
+  ProgressViewIOS: navigationOption('ProgressViewIOS'),
+  SegmentedControlIOS: navigationOption('SegmentedControlIOS')
 };

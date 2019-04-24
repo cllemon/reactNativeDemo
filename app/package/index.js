@@ -33,6 +33,11 @@ import DatePickerAndroid from './datePickerAndroid/index';
 import FlexBox from './flexbox/index';
 import DrawerLayoutAndroid from './drawerLayoutAndroid/index';
 import ProgressBarAndroid from './progressBarAndroid/index';
+import DatePickerIOS from './datePickerIOS/index';
+import MaskedViewIOS from './maskedViewIOS/index';
+import PickerIOS from './pickerIOS/index';
+import ProgressViewIOS from './progressViewIOS/index';
+import SegmentedControlIOS from './segmentedControlIOS/index';
 
 export const packageList = {
   ActivityIndicator,
@@ -66,5 +71,10 @@ export const packageList = {
   DatePickerAndroid,
   FlexBox,
   DrawerLayoutAndroid,
-  ProgressBarAndroid
+  ProgressBarAndroid,
+  DatePickerIOS,
+  MaskedViewIOS,
+  PickerIOS,
+  ProgressViewIOS,
+  SegmentedControlIOS
 };
