@@ -31,6 +31,8 @@ import Clipboard from './clipboard/index';
 import Dimensions from './dimensions/index';
 import DatePickerAndroid from './datePickerAndroid/index';
 import FlexBox from './flexbox/index';
+import DrawerLayoutAndroid from './drawerLayoutAndroid/index';
+import ProgressBarAndroid from './progressBarAndroid/index';
 
 export const packageList = {
   ActivityIndicator,
@@ -62,5 +64,7 @@ export const packageList = {
   Clipboard,
   Dimensions,
   DatePickerAndroid,
-  FlexBox
+  FlexBox,
+  DrawerLayoutAndroid,
+  ProgressBarAndroid
 };

@@ -8,10 +8,10 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 通过下面的二维码，可以在手机中安装体验 React-Native-Demos：
 
-|         | 二维码                          | 描述                                                                                                               |
-| ------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Android | ![](/public/images/QR_v1.0.png) | [ reactNativeDemo.apk](https://github.com/cllemon/reactNativeDemo/releases/download/v1.0/reactNativeDemo-v1.0.apk) |
-| IOS     | [....]()                        | 👍                                                                                                                 |
+|         | 二维码                            | 描述                                                                                                               |
+| ------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Android | ![](/public/images/QR_v1.0.0.png) | [ reactNativeDemo.apk](https://github.com/cllemon/reactNativeDemo/releases/download/v1.0/reactNativeDemo-v1.0.apk) |
+| IOS     | [....]()                          | 👍                                                                                                                 |
 
 > 注：微信等扫码跳转，在浏览器打开允许下载即可。
 
@@ -94,15 +94,15 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
   - [x] Modal
   - [x] Picker
   - [x] StatusBar
-  - [x] ViewPagerAndroid
   - [x] TouchableHighlight
   - [x] TouchableOpacity
   - [x] TouchableWithoutFeedback
 
 - Component - Android
 
-  - [ ] DrawerLayoutAndroid => 待续
-  - [ ] ProgressBarAndroid => 待续
+  - [x] ViewPagerAndroid
+  - [x] DrawerLayoutAndroid
+  - [x] ProgressBarAndroid
   - [ ] ToolbarAndroid => 待续
 
 - Component - IOS
@@ -166,4 +166,4 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 ### 开源协议
 
-本项目基于 [MIT](http://opensource.org/licenses/MIT) License，请自由的享受、参与开源。
+本项目基于 [MIT](http://opensource.org/licenses/MIT) License - Copyright (c) 2019 lemon。

@@ -52,5 +52,7 @@ export const routerList = {
   Clipboard: navigationOption('Clipboard'),
   Dimensions: navigationOption('Dimensions'),
   DatePickerAndroid: navigationOption('DatePickerAndroid'),
-  FlexBox: navigationOption('FlexBox')
+  FlexBox: navigationOption('FlexBox'),
+  DrawerLayoutAndroid: navigationOption('DrawerLayoutAndroid'),
+  ProgressBarAndroid: navigationOption('ProgressBarAndroid')
 };

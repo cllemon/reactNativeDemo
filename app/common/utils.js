@@ -26,7 +26,7 @@ export const getCodeBlock = (val = []) => {
 export const joinWebCodeBlock = code => {
   return `${
     VALUE.html
-  }<pre><code langurage="Prism" style="font-size: 28px;">${code}</code></pre></body></html>\n`;
+  }<pre><code style="font-size: 28px;">${code}</code></pre></body></html>\n`;
 };
 
 /**

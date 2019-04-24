@@ -20,10 +20,10 @@ export const VALUE = {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
-    <title></title>
-    <link href="https://apps.bdimg.com/libs/highlight.js/9.1.0/styles/solarized-light.min.css" rel="stylesheet">
+    <title>solarized-light</title>
+    <link href="https://apps.bdimg.com/libs/highlight.js/9.1.0/styles/monokai-sublime.min.css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </head><body>
+  </head><body><h1 style="color: '#999'; text-align: 'center'; ">以下代码为简单实现</h1>
   `
 };
