@@ -25,8 +25,22 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 ## 演示图例
 
-![](/public/images/demo_1.png)
-![](/public/images/demo_2.png)
+![](/public/images/ios&android_01.png)
+
+![](/public/images/ios&android_02.png)
+
+![](/public/images/ios&android_03.png)
+
+![](/public/images/ios&android_04.png)
+
+![](/public/images/ios&android_05.png)
+
+![](/public/images/ios&android_06.png)
+
+![](/public/images/ios&android_07.png)
+
+![](/public/images/ios&android_08.png)
+
 ![](/public/images/demo_3.gif)
 
 ## 第三方框架及开发环境
@@ -52,7 +66,7 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 2. 安装 react-native-cli `$ npm i -g react-native-cli`
 
-3. Clone React-Native-Demos 仓库到本地
+3. 克隆 React-Native-Demos 仓库到本地
 
 4. 安装依赖 `$ yarn || npm i`
 

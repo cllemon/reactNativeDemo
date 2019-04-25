@@ -227,11 +227,13 @@ export const APILabel = [
       },
       {
         label: 'iOS 平台 - 显示一个 ActionSheet 弹出框',
-        value: 'ActionSheetIOS'
+        value: 'ActionSheetIOS',
+        platForm: 'ios'
       },
       {
         label: 'Android 平台 - 时间选择器的对话框',
-        value: 'TimePickerAndroid'
+        value: 'TimePickerAndroid',
+        platForm: 'android'
       },
       {
         label: '控制设备震动',
