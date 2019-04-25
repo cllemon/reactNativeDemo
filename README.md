@@ -103,7 +103,7 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
   - [x] ViewPagerAndroid
   - [x] DrawerLayoutAndroid
   - [x] ProgressBarAndroid
-  - [ ] ToolbarAndroid => 待续
+  - [ ] ToolbarAndroid
 
 - Component - IOS
 
@@ -112,8 +112,8 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
   - [x] PickerIOS
   - [x] ProgressViewIOS
   - [x] SegmentedControlIOS
-  - [ ] SnapshotViewIOS => 待续
-  - [ ] SafeAreaView => 待续
+  - [ ] SnapshotViewIOS
+  - [ ] SafeAreaView
 
 - API - 交互
 
@@ -125,24 +125,24 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
   - [x] Clipboard
   - [x] Dimensions
   - [x] DatePickerAndroid
+  - [x] PermissionsAndroid
+  - [x] TimePickerAndroid
+  - [x] Share
+  - [x] ActionSheetIOS
+  - [x] ImagePickerIOS
   - [ ] Geolocation => 待续
   - [ ] AsyncStorage => 待续
-  - [ ] ActionSheetIOS => 待续
   - [ ] AppRegistry => 待续
   - [ ] BackHandler => 待续
   - [ ] ImageEditor => 待续
-  - [ ] ImagePickerIOS => 待续
   - [ ] ImageStore => 待续
   - [ ] InteractionManager => 待续
   - [ ] Keyboard => 待续
   - [ ] Linking => 待续
   - [ ] NetInfo => 待续
   - [ ] PanResponder => 待续
-  - [ ] PermissionsAndroid => 待续
   - [ ] Settings => 待续
-  - [ ] Share => 待续
-  - [ ] Systrace => 待续
-  - [ ] TimePickerAndroid => 待续
+  - [ ] Systrace
   - [ ] Vibration => 待续
 
 - API - 布局
