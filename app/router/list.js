@@ -59,5 +59,9 @@ export const routerList = {
   MaskedViewIOS: navigationOption('MaskedViewIOS'),
   PickerIOS: navigationOption('PickerIOS'),
   ProgressViewIOS: navigationOption('ProgressViewIOS'),
-  SegmentedControlIOS: navigationOption('SegmentedControlIOS')
+  SegmentedControlIOS: navigationOption('SegmentedControlIOS'),
+  ImagePickerIOS: navigationOption('ImagePickerIOS'),
+  Share: navigationOption('Share'),
+  ActionSheetIOS: navigationOption('ActionSheetIOS'),
+  TimePickerAndroid: navigationOption('TimePickerAndroid')
 };

@@ -32,6 +32,10 @@ import MaskedViewIOS from './maskedViewIOS/code';
 import PickerIOS from './pickerIOS/code';
 import ProgressViewIOS from './progressViewIOS/code';
 import SegmentedControlIOS from './segmentedControlIOS/code';
+import ImagePickerIOS from './imagePickerIOS/code';
+import Share from './share/code';
+import ActionSheetIOS from './actionSheetIOS/code';
+import TimePickerAndroid from './timePickerAndroid/code';
 
 export const codeList = {
   ActivityIndicator,
@@ -67,5 +71,9 @@ export const codeList = {
   MaskedViewIOS,
   PickerIOS,
   ProgressViewIOS,
-  SegmentedControlIOS
+  SegmentedControlIOS,
+  ImagePickerIOS,
+  Share,
+  ActionSheetIOS,
+  TimePickerAndroid
 };

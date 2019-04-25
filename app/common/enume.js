@@ -212,40 +212,45 @@ export const APILabel = [
         value: 'Dimensions'
       },
       {
-        label: '日期选择器的对话框',
+        label: 'Android 平台 - 日期选择器的对话框',
         value: 'DatePickerAndroid',
         platForm: 'android'
       },
-
-      // none
       {
-        label: '地理定位',
-        value: 'Geolocation'
+        label: 'iOS 平台 - ImagePickerIOS',
+        value: 'ImagePickerIOS',
+        platForm: 'ios'
       },
       {
-        label: 'AsyncStorage',
-        value: '简单的、异步的、持久化的 Key-Value 存储系统'
+        label: 'Share 类',
+        value: 'Share'
       },
       {
         label: 'iOS 平台 - 显示一个 ActionSheet 弹出框',
         value: 'ActionSheetIOS'
       },
       {
-        label: '根组件注册',
-        value: 'AppRegistry'
+        label: 'Android 平台 - 时间选择器的对话框',
+        value: 'TimePickerAndroid'
       },
       {
-        label: '监听设备上的后退按钮事件',
-        value: 'BackHandler'
+        label: '控制设备震动',
+        value: 'Vibration'
+      },
+      {
+        label: 'Android M(也就是6.0)开始提供的权限模型',
+        value: 'PermissionsAndroid'
       },
 
+      /********* none *********/
+
+      {
+        label: '获取设备当前的联网状态',
+        value: 'NetInfo'
+      },
       {
         label: '图片编辑',
         value: 'ImageEditor'
-      },
-      {
-        label: 'iOS 平台 - ImagePickerIOS',
-        value: 'ImagePickerIOS'
       },
       {
         label: '图片处理仓库',
@@ -260,20 +265,28 @@ export const APILabel = [
         value: 'Keyboard'
       },
       {
+        label: '地理定位',
+        value: 'Geolocation'
+      },
+      {
+        label: '简单的、异步的、持久化的 Key-Value 存储系统',
+        value: 'AsyncStorage'
+      },
+      {
+        label: '根组件注册',
+        value: 'AppRegistry'
+      },
+      {
+        label: '监听设备上的后退按钮事件',
+        value: 'BackHandler'
+      },
+      {
         label: '提供了一个通用的接口来与传入和传出的 App 链接进行交互',
         value: 'Linking'
       },
       {
-        label: 'NetInfo',
-        value: '获取设备当前的联网状态'
-      },
-      {
         label: 'PanResponder类可以将多点触摸操作协调成一个手势',
         value: 'PanResponder'
-      },
-      {
-        label: '可以访问Android M(也就是6.0)开始提供的权限模型',
-        value: 'PermissionsAndroid'
       },
       {
         label:
@@ -286,20 +299,8 @@ export const APILabel = [
         value: 'Settings'
       },
       {
-        label: 'Share 类',
-        value: 'Share'
-      },
-      {
         label: 'Systrace 类',
         value: 'Systrace'
-      },
-      {
-        label: 'Android 平台 - 时间选择器的对话框',
-        value: 'TimePickerAndroid'
-      },
-      {
-        label: '控制设备震动',
-        value: 'Vibration'
       }
     ]
   },

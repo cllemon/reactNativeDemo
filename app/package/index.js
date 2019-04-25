@@ -38,6 +38,10 @@ import MaskedViewIOS from './maskedViewIOS/index';
 import PickerIOS from './pickerIOS/index';
 import ProgressViewIOS from './progressViewIOS/index';
 import SegmentedControlIOS from './segmentedControlIOS/index';
+import ImagePickerIOS from './imagePickerIOS/index';
+import Share from './share/index';
+import ActionSheetIOS from './actionSheetIOS/index';
+import TimePickerAndroid from './timePickerAndroid';
 
 export const packageList = {
   ActivityIndicator,
@@ -76,5 +80,9 @@ export const packageList = {
   MaskedViewIOS,
   PickerIOS,
   ProgressViewIOS,
-  SegmentedControlIOS
+  SegmentedControlIOS,
+  ImagePickerIOS,
+  Share,
+  ActionSheetIOS,
+  TimePickerAndroid
 };
