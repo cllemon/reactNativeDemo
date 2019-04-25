@@ -8,10 +8,10 @@ React-Native-Demos 是基于 react-native 官方文档，把文档所列出的�
 
 通过下面的二维码，可以在手机中安装体验 React-Native-Demos：
 
-|         | 二维码                            | 描述                                                                                                               |
-| ------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Android | ![](/public/images/QR_v1.0.0.png) | [ reactNativeDemo.apk](https://github.com/cllemon/reactNativeDemo/releases/download/v1.0/reactNativeDemo-v1.0.apk) |
-| IOS     | [....]()                          | 👍                                                                                                                 |
+|         | 二维码                                     | 描述                                                                                                               |
+| ------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| Android | ![](https://www.pgyer.com/app/qrcode/8RvR) | [ reactNativeDemo.apk](https://github.com/cllemon/reactNativeDemo/releases/download/v1.0/reactNativeDemo-v1.0.apk) |
+| IOS     | [....]()                                   | 👍                                                                                                                 |
 
 > 注：微信等扫码跳转，在浏览器打开允许下载即可。
 
