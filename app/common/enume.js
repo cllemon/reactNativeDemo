@@ -243,6 +243,10 @@ export const APILabel = [
         label: 'Android M(也就是6.0)开始提供的权限模型',
         value: 'PermissionsAndroid'
       },
+      {
+        label: 'PanResponder类可以将多点触摸操作协调成一个手势',
+        value: 'PanResponder'
+      },
 
       /********* none *********/
 
@@ -287,10 +291,6 @@ export const APILabel = [
         value: 'Linking'
       },
       {
-        label: 'PanResponder类可以将多点触摸操作协调成一个手势',
-        value: 'PanResponder'
-      },
-      {
         label:
           'iOS 平台 - 处理应用的推送通知，包括权限控制以及应用图标上的角标数（未读消息数）',
         value: 'PushNotificationIOS'
@@ -323,15 +323,11 @@ export const APILabel = [
     icon: 'clapperboard',
     children: [
       {
-        label: '动画库',
+        label: '创建精细的交互控制的动画',
         value: 'Animated'
       },
       {
-        label: '动画缓动函数',
-        value: 'Easing'
-      },
-      {
-        label: '当布局变化时，自动将视图运动到它们新的位置上',
+        label: '全局的布局动画',
         value: 'LayoutAnimation'
       }
     ]

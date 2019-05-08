@@ -63,5 +63,7 @@ export const routerList = {
   ImagePickerIOS: navigationOption('ImagePickerIOS'),
   Share: navigationOption('Share'),
   ActionSheetIOS: navigationOption('ActionSheetIOS'),
-  TimePickerAndroid: navigationOption('TimePickerAndroid')
+  TimePickerAndroid: navigationOption('TimePickerAndroid'),
+  Animated: navigationOption('Animated'),
+  PanResponder: navigationOption('PanResponder')
 };

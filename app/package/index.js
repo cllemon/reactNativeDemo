@@ -42,6 +42,8 @@ import ImagePickerIOS from './imagePickerIOS/index';
 import Share from './share/index';
 import ActionSheetIOS from './actionSheetIOS/index';
 import TimePickerAndroid from './timePickerAndroid';
+import Animated from './animated/index';
+import PanResponder from './panResponder/index';
 
 export const packageList = {
   ActivityIndicator,
@@ -84,5 +86,7 @@ export const packageList = {
   ImagePickerIOS,
   Share,
   ActionSheetIOS,
-  TimePickerAndroid
+  TimePickerAndroid,
+  Animated,
+  PanResponder
 };
