@@ -36,6 +36,8 @@ import ImagePickerIOS from './imagePickerIOS/code';
 import Share from './share/code';
 import ActionSheetIOS from './actionSheetIOS/code';
 import TimePickerAndroid from './timePickerAndroid/code';
+import Animated from './animated/code';
+import PanResponder from './panResponder/code';
 
 export const codeList = {
   ActivityIndicator,
@@ -75,5 +77,7 @@ export const codeList = {
   ImagePickerIOS,
   Share,
   ActionSheetIOS,
-  TimePickerAndroid
+  TimePickerAndroid,
+  Animated,
+  PanResponder
 };
