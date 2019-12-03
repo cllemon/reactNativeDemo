@@ -10,7 +10,7 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
 
 |         | 二维码                                     | 描述                                                                                                               |
 | ------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| Android | ![](https://www.pgyer.com/app/qrcode/8RvR) | [ reactNativeDemo (点击下载apk)](https://www.pgyer.com/8RvR) |
+| Android | ![](https://www.pgyer.com/app/qrcode/KNHz?sign=&auSign=&code=) | [ reactNativeDemo (点击下载apk)](https://www.pgyer.com/KNHz) |
 | IOS     | [....]()                                   | 👍                                                                                                                 |
 
 > 注：微信等扫码跳转，在浏览器打开允许下载即可。
