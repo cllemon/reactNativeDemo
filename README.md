@@ -10,7 +10,7 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
 
 |         | 二维码                                     | 描述                                                                                                               |
 | ------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| Android | ![](https://www.pgyer.com/app/qrcode/KNHz?sign=&auSign=&code=) | [ reactNativeDemo (点击下载apk)](https://www.pgyer.com/KNHz) |
+| Android | ![](https://www.pgyer.com/app/qrcode/KNHz?sign=&auSign=&code=) | [ reactNativeDemo (点击下载apk - 内测分发密码: 123)](https://www.pgyer.com/KNHz) |
 | IOS     | [....]()                                   | 👍                                                                                                                 |
 
 > 注：微信等扫码跳转，在浏览器打开允许下载即可。
@@ -18,8 +18,6 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
 ## 说明
 
 > 目的是为了直观的熟悉官方提供了哪些能力，使之更熟悉 react-native ，为开发做好充分的准备。
-
-> 将持续更新，直到保持和英文文档进度一致；另还将收录一些第三方库和项目沉淀的一些组件，若有任何问题欢迎交流讨论
 
 > 如果对您有帮助，您可以点右上角 "Star" 鼓励一下 谢谢！ ^\_^
 
@@ -84,10 +82,8 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
 
 9. 运行项目 `$ npm run android || npm run ios`
 
-> PS：
 > 包含本机 Objective-C，Swift，Java 或 Kotlin 代码的 React Native 模块必须“链接”，以便编译器知道将它们包含在应用程序中。
 
-> PS：
 > 运行 Android 项目时，先打开 Virtual Device 或者[真机调式](https://reactnative.cn/docs/running-on-device/)
 
 ## 更新进度
@@ -148,20 +144,20 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
   - [x] Share
   - [x] ActionSheetIOS
   - [x] ImagePickerIOS
-  - [ ] Geolocation => 待续
-  - [ ] AsyncStorage => 待续
-  - [ ] AppRegistry => 待续
-  - [ ] BackHandler => 待续
-  - [ ] ImageEditor => 待续
-  - [ ] ImageStore => 待续
-  - [ ] InteractionManager => 待续
-  - [ ] Keyboard => 待续
-  - [ ] Linking => 待续
-  - [ ] NetInfo => 待续
-  - [ ] PanResponder => 待续
-  - [ ] Settings => 待续
+  - [ ] Geolocation
+  - [ ] AsyncStorage
+  - [ ] AppRegistry
+  - [ ] BackHandler
+  - [ ] ImageEditor
+  - [ ] ImageStore
+  - [ ] InteractionManager
+  - [ ] Keyboard
+  - [ ] Linking
+  - [ ] NetInfo
+  - [ ] PanResponder
+  - [ ] Settings
   - [ ] Systrace
-  - [ ] Vibration => 待续
+  - [ ] Vibration
 
 - API - 布局
 
@@ -169,19 +165,19 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
 
 - API - 动画
 
-  - [ ] Animated => 待续
-  - [ ] Easing => 待续
-  - [ ] LayoutAnimation => 待续
+  - [ ] Animated
+  - [ ] Easing
+  - [ ] LayoutAnimation
 
 - API - 样式
-  - [ ] ImageStyle => 待续
-  - [ ] PixelRatio => 待续
-  - [ ] Shadow => 待续
-  - [ ] StyleSheet => 待续
-  - [ ] TextStyle => 待续
-  - [ ] Transforms => 待续
-  - [ ] ViewStyle => 待续
+  - [ ] ImageStyle
+  - [ ] PixelRatio
+  - [ ] Shadow
+  - [ ] StyleSheet
+  - [ ] TextStyle
+  - [ ] Transforms
+  - [ ] ViewStyle
 
-### 开源协议
+### License
 
-本项目基于 [MIT](http://opensource.org/licenses/MIT) License - Copyright (c) 2019 lemon。
+Copyright (c) 2019 lemon。
