@@ -1,12 +1,12 @@
-# React-Native-Demo
+# reactNativeDemo
 
-React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基础组件（简洁、易用、高效） 和 API 实现一遍，并以演示的形式呈现出来。
+reactNativeDemo 是基于 react-native 官方文档，把文档所列出的基础组件（简洁、易用、高效） 和 API 实现一遍，并以演示的形式呈现出来。
 
 ![](https://img.shields.io/badge/License-MIT-lightgrey.svg) ![](https://img.shields.io/badge/Powered%20by-ReactNative-28b1b0.svg)
 
 ## 在线体验
 
-通过下面的二维码，可以在手机中安装体验 React-Native-Demo  ( **内测分发密码: 123** )
+通过下面的二维码，可以在手机中安装体验 reactNativeDemo  ( **内测分发密码: 123** )
 
 |         | 二维码                                     | 描述                                                                                                               |
 | ------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
@@ -68,7 +68,7 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
 
 2. 安装 react-native-cli `$ npm i -g react-native-cli`
 
-3. 克隆 React-Native-Demo 仓库到本地
+3. 克隆 reactNativeDemo 仓库到本地
 
 4. 安装依赖 `$ yarn || npm i`
 
@@ -169,15 +169,6 @@ React-Native-Demo 是基于 react-native 官方文档，把文档所列出的基
   - [ ] Easing
   - [ ] LayoutAnimation
 
-- API - 样式
-  - [ ] ImageStyle
-  - [ ] PixelRatio
-  - [ ] Shadow
-  - [ ] StyleSheet
-  - [ ] TextStyle
-  - [ ] Transforms
-  - [ ] ViewStyle
+## License
 
-### License
-
-Copyright (c) 2019 lemon。
+Copyright (c) 2019 cllemon。
